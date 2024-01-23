@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Resume</title>
+  <style>
+    body {
+      background-color: #121212; /* Dark background color */
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow for header */
+    }
+
+    section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Box shadow for section */
+        transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+    }
+    section:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Change box shadow on hover */
+      }
+  
+
+    h1, h2, h3 {
+      color: #61dafb; /* Light Blue Color */
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+       /* Rounded corners for the resume picture */
+      margin-top: 20px;
+      opacity: 0; /* Initially hidden */
+      animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+    }
+
+    button {
+        background-color: #61dafb;
+        color: #121212;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+        display: inline-block;
+        transition: background-color 0.3s ease; /* Smooth transition on hover */
+    }
+    button:hover {
+        background-color: #4285f4; /* Change color on hover */
+        transform: scale(1.05)
+      }
+  
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Avinash Singh</h1>
+    <p>Web Developer</p>
+    <button onclick="downloadResume()">Download Resume</button>
+    <!-- Replace 'path/to/your/resume-image.jpg' with the actual path to your resume picture -->
+    <img src="./images/projects/CURRENT RESUME 2_page-0001.jpg" alt="Resume Picture">
+   
+  </header>
+
+  <section>
+ 
+
+    <!-- Add more sections for skills, projects, etc. -->
+
+    <!-- Download Button -->
+    
+  </section>
+
+  <script>
+    function downloadResume() {
+      // Replace 'path/to/your/resume.pdf' with the actual path to your resume file
+      var downloadLink = document.createElement('a');
+      downloadLink.href = './images/projects/CURRENT RESUME 2.pdf';
+      downloadLink.download = 'CURRENT RESUME 2.pdf';
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    }
+  </script>
+
+</body>
+</html>
+
